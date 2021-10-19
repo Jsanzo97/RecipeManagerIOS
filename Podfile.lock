@@ -1,0 +1,69 @@
+PODS:
+  - Alamofire (4.7.2)
+  - MaterialComponents/Buttons (54.5.0):
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
+  - MaterialComponents/Ink (54.5.0):
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Application (54.5.0)
+  - MaterialComponents/private/Math (54.5.0)
+  - MaterialComponents/ShadowElevations (54.5.0)
+  - MaterialComponents/ShadowLayer (54.5.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/Typography (54.5.0):
+    - MaterialComponents/private/Application
+  - MDFInternationalization (2.0.0)
+  - MDFTextAccessibility (2.0.1)
+  - ObjectMapper (3.3.0)
+  - RxAlamofire (4.2.0):
+    - RxAlamofire/Core (= 4.2.0)
+  - RxAlamofire/Core (4.2.0):
+    - Alamofire (~> 4.5)
+    - RxSwift (~> 4)
+  - RxSwift (4.1.2)
+  - RxSwiftExt (3.2.0):
+    - RxSwiftExt/Core (= 3.2.0)
+  - RxSwiftExt/Core (3.2.0):
+    - RxSwift (~> 4.0)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - Alamofire
+  - MaterialComponents/Buttons (= 54.5.0)
+  - ObjectMapper (= 3.3.0)
+  - RxAlamofire
+  - RxSwift
+  - RxSwiftExt
+  - SVProgressHUD (= 2.2.5)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - MaterialComponents
+    - MDFInternationalization
+    - MDFTextAccessibility
+    - ObjectMapper
+    - RxAlamofire
+    - RxSwift
+    - RxSwiftExt
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  MaterialComponents: 0d9d3090bbd67bf6d4ac2896c84cf02dfd06e3c2
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  MDFTextAccessibility: f4bb4cc2194286651b59a215fdeaa0e05dc90ba5
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  RxAlamofire: 87a9c588541210cc3e4a1f843ccc3ecf3eb98b31
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
+  RxSwiftExt: 64b7140124629a6a084159735f3714f0fb1c61d6
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: dadc3263ac19e43b4aaf5b96df616f61f9dafd93
+
+COCOAPODS: 1.8.4

@@ -1,0 +1,78 @@
+
+/* Class = "UILabel"; text = "Ingredient values"; ObjectID = "0s4-7z-ZC7"; */
+"0s4-7z-ZC7.text" = "Ingredient values";
+
+/* Class = "UILabel"; text = "Duration Value"; ObjectID = "2fe-bf-xfm"; */
+"2fe-bf-xfm.text" = "Duration Value";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "58q-Lb-Y9e"; */
+"58q-Lb-Y9e.normalTitle" = "Back";
+
+/* Class = "UILabel"; text = "Duration:"; ObjectID = "Bln-I8-VyV"; */
+"Bln-I8-VyV.text" = "Duration:";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "IG9-pk-NXv"; */
+"IG9-pk-NXv.text" = "Title";
+
+/* Class = "UILabel"; text = "SubcategoriesValue"; ObjectID = "LHj-CK-wlH"; */
+"LHj-CK-wlH.text" = "SubcategoriesValue";
+
+/* Class = "UILabel"; text = "Main Category:"; ObjectID = "LXo-b4-EnN"; */
+"LXo-b4-EnN.text" = "Main Category:";
+
+/* Class = "UILabel"; text = "DurationValue"; ObjectID = "Mkb-U4-HG5"; */
+"Mkb-U4-HG5.text" = "DurationValue";
+
+/* Class = "UILabel"; text = "Subcategories:"; ObjectID = "Q85-yH-rxV"; */
+"Q85-yH-rxV.text" = "Subcategories:";
+
+/* Class = "UILabel"; text = "Difficult:"; ObjectID = "QJR-tx-QPE"; */
+"QJR-tx-QPE.text" = "Difficult:";
+
+/* Class = "UILabel"; text = "Description:"; ObjectID = "Yru-jY-4qA"; */
+"Yru-jY-4qA.text" = "Description:";
+
+/* Class = "UILabel"; text = "DescriptionValue"; ObjectID = "aeR-r6-lau"; */
+"aeR-r6-lau.text" = "DescriptionValue";
+
+/* Class = "UILabel"; text = "Duration:"; ObjectID = "bmE-ni-0eD"; */
+"bmE-ni-0eD.text" = "Duration:";
+
+/* Class = "UIButton"; normalTitle = "Remove"; ObjectID = "dF0-3g-cRN"; */
+"dF0-3g-cRN.normalTitle" = "Remove";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "dwn-nR-5oa"; */
+"dwn-nR-5oa.text" = "Title";
+
+/* Class = "UILabel"; text = "Category:"; ObjectID = "e8Q-Sk-G6d"; */
+"e8Q-Sk-G6d.text" = "Category:";
+
+/* Class = "UILabel"; text = "Calories Value"; ObjectID = "f0Q-Bz-gvv"; */
+"f0Q-Bz-gvv.text" = "Calories Value";
+
+/* Class = "UIButton"; normalTitle = "Details"; ObjectID = "iUZ-tz-NZI"; */
+"iUZ-tz-NZI.normalTitle" = "Details";
+
+/* Class = "UILabel"; text = "Category value"; ObjectID = "ird-pE-EiD"; */
+"ird-pE-EiD.text" = "Category value";
+
+/* Class = "UILabel"; text = "Category value"; ObjectID = "kwX-dX-qTR"; */
+"kwX-dX-qTR.text" = "Category value";
+
+/* Class = "UILabel"; text = "DifficulValue"; ObjectID = "pyM-k8-IdC"; */
+"pyM-k8-IdC.text" = "DifficulValue";
+
+/* Class = "UILabel"; text = "DifficultValue"; ObjectID = "utx-hX-NLg"; */
+"utx-hX-NLg.text" = "DifficultValue";
+
+/* Class = "UILabel"; text = "Calories:"; ObjectID = "vCx-Ey-RCr"; */
+"vCx-Ey-RCr.text" = "Calories:";
+
+/* Class = "UILabel"; text = "Ingredients:"; ObjectID = "wRq-0t-cgD"; */
+"wRq-0t-cgD.text" = "Ingredients:";
+
+/* Class = "UILabel"; text = "Difficult:"; ObjectID = "zqj-vR-STm"; */
+"zqj-vR-STm.text" = "Difficult:";
+
+/* Class = "UITabBarItem"; title = "Recipe Book"; ObjectID = "zs9-aV-b2v"; */
+"zs9-aV-b2v.title" = "Recipe Book";

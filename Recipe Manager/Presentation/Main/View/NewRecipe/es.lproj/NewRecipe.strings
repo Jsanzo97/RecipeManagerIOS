@@ -1,0 +1,69 @@
+
+/* Class = "UITextField"; placeholder = "Ingredient name"; ObjectID = "3Mf-ek-Gha"; */
+"3Mf-ek-Gha.placeholder" = "Nombre del ingrediente";
+
+/* Class = "UILabel"; text = "Difficult"; ObjectID = "6pd-gc-zBn"; */
+"6pd-gc-zBn.text" = "Dificultad";
+
+/* Class = "UITextField"; placeholder = "Add Description"; ObjectID = "7ox-yQ-aiw"; */
+"7ox-yQ-aiw.placeholder" = "Añadir descripción";
+
+/* Class = "UITabBarItem"; title = "New Recipe"; ObjectID = "8lh-ck-u8y"; */
+"8lh-ck-u8y.title" = "Nueva receta";
+
+/* Class = "UILabel"; text = "Calories"; ObjectID = "BiV-7A-L1E"; */
+"BiV-7A-L1E.text" = "Calorías";
+
+/* Class = "UILabel"; text = "Duration in hours"; ObjectID = "CXA-26-bL3"; */
+"CXA-26-bL3.text" = "Duración en horas";
+
+/* Class = "UILabel"; text = "Ingredients"; ObjectID = "GtF-Ex-IVn"; */
+"GtF-Ex-IVn.text" = "Ingredientes";
+
+/* Class = "UILabel"; text = "Type:"; ObjectID = "Hbf-ne-Nyt"; */
+"Hbf-ne-Nyt.text" = "Tipo:";
+
+/* Class = "UIButton"; normalTitle = "Accept"; ObjectID = "KVr-xR-iXd"; */
+"KVr-xR-iXd.normalTitle" = "Aceptar";
+
+/* Class = "UITextField"; placeholder = "Ingredients"; ObjectID = "Pjz-4g-usU"; */
+"Pjz-4g-usU.placeholder" = "Ingredientes";
+
+/* Class = "UIButton"; normalTitle = "Accept"; ObjectID = "SJg-rJ-Owo"; */
+"SJg-rJ-Owo.normalTitle" = "Aceptar";
+
+/* Class = "UITextField"; placeholder = "Select Subcategory"; ObjectID = "WdC-D2-ubS"; */
+"WdC-D2-ubS.placeholder" = "Seleccionar Subcategoría";
+
+/* Class = "UITextField"; placeholder = "Change Difficult"; ObjectID = "XYk-YP-MZJ"; */
+"XYk-YP-MZJ.placeholder" = "Cambiar Dificultad";
+
+/* Class = "UITextField"; placeholder = "Add duration"; ObjectID = "Yg6-qk-4T3"; */
+"Yg6-qk-4T3.placeholder" = "Añadir duración";
+
+/* Class = "UITextField"; placeholder = "Recipe Name"; ObjectID = "Z0S-7b-NSl"; */
+"Z0S-7b-NSl.placeholder" = "Nombre de la receta";
+
+/* Class = "UITextField"; placeholder = "Add calories"; ObjectID = "ZFi-YL-VlC"; */
+"ZFi-YL-VlC.placeholder" = "Añadir calorías";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "ZT6-8q-stC"; */
+"ZT6-8q-stC.text" = "Categoría";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "a3o-ew-3Z5"; */
+"a3o-ew-3Z5.normalTitle" = "Cancelar";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "kNp-fC-TqN"; */
+"kNp-fC-TqN.normalTitle" = "Cancelar";
+
+/* Class = "UITextField"; placeholder = "Select type"; ObjectID = "pkj-4Y-sJL"; */
+"pkj-4Y-sJL.placeholder" = "Seleccionar tipo";
+
+/* Class = "UILabel"; text = "Subcategory"; ObjectID = "rMf-5f-52R"; */
+"rMf-5f-52R.text" = "Subcategoría";
+
+/* Class = "UIButton"; normalTitle = "Add Ingredient"; ObjectID = "tjZ-5N-aT2"; */
+"tjZ-5N-aT2.normalTitle" = "Añadir Ingrediente";
+
+/* Class = "UITextField"; placeholder = "Select Category"; ObjectID = "ugB-hA-EEU"; */
+"ugB-hA-EEU.placeholder" = "Seleccionar Categoría";

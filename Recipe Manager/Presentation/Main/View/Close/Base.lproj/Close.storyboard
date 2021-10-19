@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wyR-az-Bmy">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Close session-->
+        <scene sceneID="dBn-Vk-jlv">
+            <objects>
+                <navigationController id="wyR-az-Bmy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Close session" image="close_selected" selectedImage="close" id="RqP-Q4-Xsw"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6eL-p5-ebb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aOa-1b-GlA" kind="relationship" relationship="rootViewController" id="ImY-b4-ePZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hc8-5B-tUS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="377"/>
+        </scene>
+        <!--CloseVC-->
+        <scene sceneID="QNY-2Z-NlE">
+            <objects>
+                <viewController id="aOa-1b-GlA" customClass="CloseVC" customModule="Recipe_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="frD-dB-8HE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvr-x2-yLb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chef_icon" translatesAutoresizingMaskIntoConstraints="NO" id="S32-K5-Tbv">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks for use the application!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWj-eV-fIt">
+                                <rect key="frame" x="16" y="104" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.61568627450000002" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by Jorge Sanzo Hernando" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAY-Qy-dwO">
+                                <rect key="frame" x="16" y="141" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.61568627450000002" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYr-Vf-q6i" customClass="RoundButton" customModule="Recipe_Manager" customModuleProvider="target">
+                                <rect key="frame" x="32" y="740" width="350" height="41"/>
+                                <color key="backgroundColor" red="0.0" green="0.61568627450000002" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Close session">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeSessionAction:" destination="aOa-1b-GlA" eventType="touchUpInside" id="73E-I0-40y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qSO-Bi-PT5" firstAttribute="trailing" secondItem="vAY-Qy-dwO" secondAttribute="trailing" constant="16" id="FZw-Kh-H98"/>
+                            <constraint firstItem="qSO-Bi-PT5" firstAttribute="bottom" secondItem="S32-K5-Tbv" secondAttribute="bottom" id="HSl-v1-oda"/>
+                            <constraint firstItem="qSO-Bi-PT5" firstAttribute="trailing" secondItem="sYr-Vf-q6i" secondAttribute="trailing" constant="32" id="JmP-dk-NJT"/>
+                            <constraint firstItem="vAY-Qy-dwO" firstAttribute="leading" secondItem="qSO-Bi-PT5" secondAttribute="leading" constant="16" id="MR4-Ik-nxf"/>
+                            <constraint firstItem="S32-K5-Tbv" firstAttribute="top" secondItem="qSO-Bi-PT5" secondAttribute="top" id="NUx-jt-fop"/>
+                            <constraint firstItem="KWj-eV-fIt" firstAttribute="leading" secondItem="qSO-Bi-PT5" secondAttribute="leading" constant="16" id="NrA-A1-CNs"/>
+                            <constraint firstItem="fvr-x2-yLb" firstAttribute="top" secondItem="qSO-Bi-PT5" secondAttribute="top" id="OAT-5i-4EM"/>
+                            <constraint firstItem="qSO-Bi-PT5" firstAttribute="trailing" secondItem="KWj-eV-fIt" secondAttribute="trailing" constant="16" id="QJJ-k1-WB2"/>
+                            <constraint firstItem="S32-K5-Tbv" firstAttribute="leading" secondItem="qSO-Bi-PT5" secondAttribute="leading" id="Vn6-Gp-RdA"/>
+                            <constraint firstItem="vAY-Qy-dwO" firstAttribute="top" secondItem="KWj-eV-fIt" secondAttribute="bottom" constant="16" id="Yt2-AX-hCm"/>
+                            <constraint firstItem="qSO-Bi-PT5" firstAttribute="bottom" secondItem="sYr-Vf-q6i" secondAttribute="bottom" constant="32" id="pPe-sI-4te"/>
+                            <constraint firstItem="KWj-eV-fIt" firstAttribute="top" secondItem="qSO-Bi-PT5" secondAttribute="top" constant="16" id="rta-Su-vmR"/>
+                            <constraint firstItem="qSO-Bi-PT5" firstAttribute="trailing" secondItem="S32-K5-Tbv" secondAttribute="trailing" id="uyW-oO-YgY"/>
+                            <constraint firstItem="qSO-Bi-PT5" firstAttribute="bottom" secondItem="fvr-x2-yLb" secondAttribute="bottom" id="vfQ-im-Yha"/>
+                            <constraint firstItem="qSO-Bi-PT5" firstAttribute="trailing" secondItem="fvr-x2-yLb" secondAttribute="trailing" id="yq1-sa-yt4"/>
+                            <constraint firstItem="fvr-x2-yLb" firstAttribute="leading" secondItem="qSO-Bi-PT5" secondAttribute="leading" id="ysl-ex-sx6"/>
+                            <constraint firstItem="sYr-Vf-q6i" firstAttribute="leading" secondItem="qSO-Bi-PT5" secondAttribute="leading" constant="32" id="zUd-gq-Ddk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qSO-Bi-PT5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zBI-8m-dXu"/>
+                    <connections>
+                        <outlet property="closeViewBottom" destination="vfQ-im-Yha" id="PzF-Fu-9RY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oZh-BO-5UA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="946" y="376"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chef_icon" width="467" height="534"/>
+        <image name="close" width="32" height="32"/>
+        <image name="close_selected" width="32" height="32"/>
+    </resources>
+</document>

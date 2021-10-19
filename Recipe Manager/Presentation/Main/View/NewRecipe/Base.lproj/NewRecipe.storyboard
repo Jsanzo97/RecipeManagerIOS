@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C6l-PJ-1lM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Recipe-->
+        <scene sceneID="ccq-mk-pMe">
+            <objects>
+                <navigationController id="C6l-PJ-1lM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="New Recipe" image="newRecipe_selected" selectedImage="newRecipe" id="8lh-ck-u8y"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3IA-Fd-KZg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="x5e-W8-18p" kind="relationship" relationship="rootViewController" id="qyK-d5-TFk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3S7-0p-Gdl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="246" y="35"/>
+        </scene>
+        <!--New RecipeVC-->
+        <scene sceneID="nLn-WK-svO">
+            <objects>
+                <viewController id="x5e-W8-18p" customClass="NewRecipeVC" customModule="Recipe_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IOy-Mf-UbC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N3N-sL-2It">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chef_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ORa-Q2-Tiz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mev-iN-iM8">
+                                <rect key="frame" x="8" y="96" width="398" height="340"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipe Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z0S-7b-NSl">
+                                        <rect key="frame" x="8" y="8" width="382" height="34"/>
+                                        <color key="textColor" red="0.0" green="0.61568627450000002" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZT6-8q-stC">
+                                        <rect key="frame" x="8" y="50" width="76" height="34"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ugB-hA-EEU">
+                                        <rect key="frame" x="92" y="50" width="298" height="34"/>
+                                        <color key="textColor" red="0.0" green="0.61568627450000002" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subcategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMf-5f-52R" userLabel="Subcategory">
+                                        <rect key="frame" x="8" y="92" width="105.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Subcategory" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WdC-D2-ubS">
+                                        <rect key="frame" x="121.5" y="92" width="268.5" height="34"/>
+                                        <color key="textColor" red="0.0" green="0.61568627450000002" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtF-Ex-IVn">
+                                        <rect key="frame" x="8" y="134" width="94" height="34"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingredients" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pjz-4g-usU">
+                                        <rect key="frame" x="110" y="134" width="171" height="34"/>
+                                        <color key="textColor" red="0.0" green="0.61568627450000002" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjZ-5N-aT2" customClass="RoundButton" customModule="Recipe_Manager" customModuleProvider="target">
+                                        <rect key="frame" x="289" y="136" width="101" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Add Ingredient"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addIngredientAction:" destination="x5e-W8-18p" eventType="touchUpInside" id="XUu-BI-BYX"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ox-yQ-aiw">
+                                        <rect key="frame" x="8" y="176" width="382" height="34"/>
+                                        <color key="textColor" red="0.0" green="0.61568627450000002" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration in hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXA-26-bL3">
+                                        <rect key="frame" x="8" y="218" width="131" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add duration" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yg6-qk-4T3">
+                                        <rect key="frame" x="147" y="218" width="243" height="34"/>
+                                        <color key="textColor" red="0.0" green="0.61568627450000002" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficult" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pd-gc-zBn">
+                                        <rect key="frame" x="8" y="260" width="59.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Change Difficult" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XYk-YP-MZJ">
+                                        <rect key="frame" x="75.5" y="260" width="314.5" height="34"/>
+                                        <color key="textColor" red="0.0" green="0.61568627450000002" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qdl-IW-lsC">
+                                        <rect key="frame" x="8" y="302" width="382" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3o-ew-3Z5" customClass="RoundButton" customModule="Recipe_Manager" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="cancelRecipeAction:" destination="x5e-W8-18p" eventType="touchUpInside" id="hY5-eN-MCD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVr-xR-iXd" customClass="RoundButton" customModule="Recipe_Manager" customModuleProvider="target">
+                                                <rect key="frame" x="199" y="0.0" width="183" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Accept"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="acceptRecipeAction:" destination="x5e-W8-18p" eventType="touchUpInside" id="Gwt-R6-XPk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.61568627450000002" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="7ox-yQ-aiw" firstAttribute="top" secondItem="Pjz-4g-usU" secondAttribute="bottom" constant="8" id="0Vs-hh-ngK"/>
+                                    <constraint firstAttribute="trailing" secondItem="7ox-yQ-aiw" secondAttribute="trailing" constant="8" id="1QW-Us-7mY"/>
+                                    <constraint firstAttribute="trailing" secondItem="qdl-IW-lsC" secondAttribute="trailing" constant="8" id="4dR-sj-wae"/>
+                                    <constraint firstItem="ZT6-8q-stC" firstAttribute="top" secondItem="Z0S-7b-NSl" secondAttribute="bottom" constant="8" id="5o2-xV-dHR"/>
+                                    <constraint firstItem="Yg6-qk-4T3" firstAttribute="top" secondItem="CXA-26-bL3" secondAttribute="top" id="6Y9-OX-bSU"/>
+                                    <constraint firstItem="GtF-Ex-IVn" firstAttribute="height" secondItem="Pjz-4g-usU" secondAttribute="height" id="73j-nU-N81"/>
+                                    <constraint firstItem="WdC-D2-ubS" firstAttribute="leading" secondItem="rMf-5f-52R" secondAttribute="trailing" constant="8" id="82Y-aS-XV8"/>
+                                    <constraint firstItem="XYk-YP-MZJ" firstAttribute="top" secondItem="6pd-gc-zBn" secondAttribute="top" id="8KL-cs-OgF"/>
+                                    <constraint firstItem="Pjz-4g-usU" firstAttribute="leading" secondItem="GtF-Ex-IVn" secondAttribute="trailing" constant="8" id="AaU-64-0N8"/>
+                                    <constraint firstItem="tjZ-5N-aT2" firstAttribute="centerY" secondItem="Pjz-4g-usU" secondAttribute="centerY" id="CRs-cf-nxO"/>
+                                    <constraint firstItem="ZT6-8q-stC" firstAttribute="height" secondItem="ugB-hA-EEU" secondAttribute="height" id="Cl0-BV-98W"/>
+                                    <constraint firstItem="Pjz-4g-usU" firstAttribute="top" secondItem="GtF-Ex-IVn" secondAttribute="top" id="D6n-U4-cUa"/>
+                                    <constraint firstItem="WdC-D2-ubS" firstAttribute="top" secondItem="ZT6-8q-stC" secondAttribute="bottom" constant="8" id="DPb-sZ-suj"/>
+                                    <constraint firstItem="Z0S-7b-NSl" firstAttribute="top" secondItem="mev-iN-iM8" secondAttribute="top" constant="8" id="Dcr-hs-WkR"/>
+                                    <constraint firstAttribute="trailing" secondItem="XYk-YP-MZJ" secondAttribute="trailing" constant="8" id="EG6-vb-lMz"/>
+                                    <constraint firstItem="CXA-26-bL3" firstAttribute="top" secondItem="7ox-yQ-aiw" secondAttribute="bottom" constant="8" id="GBF-uo-MmS"/>
+                                    <constraint firstAttribute="trailing" secondItem="tjZ-5N-aT2" secondAttribute="trailing" constant="8" id="IBW-0C-5aS"/>
+                                    <constraint firstItem="6pd-gc-zBn" firstAttribute="height" secondItem="XYk-YP-MZJ" secondAttribute="height" id="JdF-iK-BYW"/>
+                                    <constraint firstAttribute="trailing" secondItem="WdC-D2-ubS" secondAttribute="trailing" constant="8" id="Nm7-uJ-iH3"/>
+                                    <constraint firstItem="rMf-5f-52R" firstAttribute="height" secondItem="WdC-D2-ubS" secondAttribute="height" id="OgP-A9-Vnr"/>
+                                    <constraint firstItem="rMf-5f-52R" firstAttribute="leading" secondItem="ZT6-8q-stC" secondAttribute="leading" id="P2g-Sa-IpC"/>
+                                    <constraint firstItem="ZT6-8q-stC" firstAttribute="leading" secondItem="Z0S-7b-NSl" secondAttribute="leading" id="Rcy-CO-1V7"/>
+                                    <constraint firstItem="Yg6-qk-4T3" firstAttribute="leading" secondItem="CXA-26-bL3" secondAttribute="trailing" constant="8" id="Rr6-jk-PQc"/>
+                                    <constraint firstItem="XYk-YP-MZJ" firstAttribute="bottom" secondItem="qdl-IW-lsC" secondAttribute="top" constant="-8" id="Uai-vq-UIK"/>
+                                    <constraint firstItem="CXA-26-bL3" firstAttribute="height" secondItem="Yg6-qk-4T3" secondAttribute="height" id="Xid-W3-tDF"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z0S-7b-NSl" secondAttribute="trailing" constant="8" id="Zlf-AC-dUM"/>
+                                    <constraint firstItem="qdl-IW-lsC" firstAttribute="leading" secondItem="mev-iN-iM8" secondAttribute="leading" constant="8" id="bRf-Jl-4V1"/>
+                                    <constraint firstItem="6pd-gc-zBn" firstAttribute="top" secondItem="CXA-26-bL3" secondAttribute="bottom" constant="8" id="bYT-c8-MOY"/>
+                                    <constraint firstItem="GtF-Ex-IVn" firstAttribute="leading" secondItem="rMf-5f-52R" secondAttribute="leading" id="bpT-p8-KfG"/>
+                                    <constraint firstItem="ugB-hA-EEU" firstAttribute="top" secondItem="ZT6-8q-stC" secondAttribute="top" id="dIu-Mt-GGh"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yg6-qk-4T3" secondAttribute="trailing" constant="8" id="dW5-4m-KOU"/>
+                                    <constraint firstItem="CXA-26-bL3" firstAttribute="leading" secondItem="7ox-yQ-aiw" secondAttribute="leading" id="h2M-kO-ZnX"/>
+                                    <constraint firstItem="ugB-hA-EEU" firstAttribute="leading" secondItem="ZT6-8q-stC" secondAttribute="trailing" constant="8" id="iR9-3s-uf1"/>
+                                    <constraint firstItem="rMf-5f-52R" firstAttribute="top" secondItem="ZT6-8q-stC" secondAttribute="bottom" constant="8" id="okI-4M-aWN"/>
+                                    <constraint firstItem="6pd-gc-zBn" firstAttribute="leading" secondItem="CXA-26-bL3" secondAttribute="leading" id="p7b-zp-Xbt"/>
+                                    <constraint firstItem="tjZ-5N-aT2" firstAttribute="leading" secondItem="Pjz-4g-usU" secondAttribute="trailing" constant="8" id="pcy-OP-MhT"/>
+                                    <constraint firstItem="GtF-Ex-IVn" firstAttribute="top" secondItem="rMf-5f-52R" secondAttribute="bottom" constant="8" id="sBh-iC-23K"/>
+                                    <constraint firstAttribute="trailing" secondItem="ugB-hA-EEU" secondAttribute="trailing" constant="8" id="sfL-em-Guj"/>
+                                    <constraint firstItem="7ox-yQ-aiw" firstAttribute="leading" secondItem="mev-iN-iM8" secondAttribute="leading" constant="8" id="vin-5i-QLp"/>
+                                    <constraint firstItem="XYk-YP-MZJ" firstAttribute="leading" secondItem="6pd-gc-zBn" secondAttribute="trailing" constant="8" id="y7p-n2-BBD"/>
+                                    <constraint firstItem="Z0S-7b-NSl" firstAttribute="leading" secondItem="mev-iN-iM8" secondAttribute="leading" constant="8" id="ybR-Hz-F9q"/>
+                                    <constraint firstAttribute="bottom" secondItem="qdl-IW-lsC" secondAttribute="bottom" constant="8" id="zQ6-Zo-JQL"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D6K-LM-8ov" userLabel="New Ingredient View">
+                                <rect key="frame" x="8" y="96" width="398" height="172"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingredient name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Mf-ek-Gha">
+                                        <rect key="frame" x="8" y="8" width="382" height="34"/>
+                                        <color key="textColor" red="0.0" green="0.61568627450000002" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbf-ne-Nyt">
+                                        <rect key="frame" x="8" y="50" width="46.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pkj-4Y-sJL">
+                                        <rect key="frame" x="62.5" y="50" width="327.5" height="34"/>
+                                        <color key="textColor" red="0.0" green="0.61568627450000002" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiV-7A-L1E">
+                                        <rect key="frame" x="8" y="92" width="67.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add calories" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZFi-YL-VlC">
+                                        <rect key="frame" x="83.5" y="92" width="306.5" height="34"/>
+                                        <color key="textColor" red="0.0" green="0.61568627450000002" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="LYz-Ds-BWj">
+                                        <rect key="frame" x="8" y="134" width="382" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNp-fC-TqN" customClass="RoundButton" customModule="Recipe_Manager" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="cancelIngredientAction:" destination="x5e-W8-18p" eventType="touchUpInside" id="iRF-w3-pox"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJg-rJ-Owo" customClass="RoundButton" customModule="Recipe_Manager" customModuleProvider="target">
+                                                <rect key="frame" x="199" y="0.0" width="183" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Accept"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="acceptIngredientAction:" destination="x5e-W8-18p" eventType="touchUpInside" id="xbz-dL-jje"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.61568627450000002" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Hbf-ne-Nyt" firstAttribute="bottom" secondItem="pkj-4Y-sJL" secondAttribute="bottom" id="0a0-Kd-OK4"/>
+                                    <constraint firstItem="BiV-7A-L1E" firstAttribute="leading" secondItem="D6K-LM-8ov" secondAttribute="leading" constant="8" id="1ZS-gJ-uVz"/>
+                                    <constraint firstItem="ZFi-YL-VlC" firstAttribute="leading" secondItem="BiV-7A-L1E" secondAttribute="trailing" constant="8" id="Gm1-ND-FBr"/>
+                                    <constraint firstItem="ZFi-YL-VlC" firstAttribute="bottom" secondItem="LYz-Ds-BWj" secondAttribute="top" constant="-8" id="Hf9-mJ-HRh"/>
+                                    <constraint firstItem="pkj-4Y-sJL" firstAttribute="top" secondItem="Hbf-ne-Nyt" secondAttribute="top" id="Iba-qI-bGF"/>
+                                    <constraint firstItem="pkj-4Y-sJL" firstAttribute="leading" secondItem="Hbf-ne-Nyt" secondAttribute="trailing" constant="8" id="R0U-Xx-sbA"/>
+                                    <constraint firstItem="BiV-7A-L1E" firstAttribute="bottom" secondItem="ZFi-YL-VlC" secondAttribute="bottom" id="Uaz-y4-c08"/>
+                                    <constraint firstItem="Hbf-ne-Nyt" firstAttribute="top" secondItem="3Mf-ek-Gha" secondAttribute="bottom" constant="8" id="aKb-Bo-hoa"/>
+                                    <constraint firstAttribute="trailing" secondItem="LYz-Ds-BWj" secondAttribute="trailing" constant="8" id="af2-yw-us6"/>
+                                    <constraint firstItem="BiV-7A-L1E" firstAttribute="top" secondItem="pkj-4Y-sJL" secondAttribute="bottom" constant="8" id="iBk-ng-RBT"/>
+                                    <constraint firstItem="LYz-Ds-BWj" firstAttribute="leading" secondItem="D6K-LM-8ov" secondAttribute="leading" constant="8" id="izX-eq-V6D"/>
+                                    <constraint firstItem="3Mf-ek-Gha" firstAttribute="top" secondItem="D6K-LM-8ov" secondAttribute="top" constant="8" id="n4W-5c-YPT"/>
+                                    <constraint firstAttribute="bottom" secondItem="LYz-Ds-BWj" secondAttribute="bottom" constant="8" id="nxB-2G-apD"/>
+                                    <constraint firstItem="3Mf-ek-Gha" firstAttribute="leading" secondItem="D6K-LM-8ov" secondAttribute="leading" constant="8" id="plg-P9-AHn"/>
+                                    <constraint firstAttribute="trailing" secondItem="pkj-4Y-sJL" secondAttribute="trailing" constant="8" id="t9Y-37-gUY"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Mf-ek-Gha" secondAttribute="trailing" constant="8" id="tWU-Il-xUu"/>
+                                    <constraint firstItem="Hbf-ne-Nyt" firstAttribute="leading" secondItem="D6K-LM-8ov" secondAttribute="leading" constant="8" id="uBf-OW-75o"/>
+                                    <constraint firstItem="ZFi-YL-VlC" firstAttribute="top" secondItem="BiV-7A-L1E" secondAttribute="top" id="xjj-10-ZH3"/>
+                                    <constraint firstItem="ZFi-YL-VlC" firstAttribute="trailing" secondItem="D6K-LM-8ov" secondAttribute="trailing" constant="-8" id="zbe-gH-Hwd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zba-YO-O9W" firstAttribute="bottom" secondItem="ORa-Q2-Tiz" secondAttribute="bottom" id="Caj-k3-x26"/>
+                            <constraint firstItem="mev-iN-iM8" firstAttribute="top" secondItem="zba-YO-O9W" secondAttribute="top" constant="8" id="Cgc-9Z-Wjv"/>
+                            <constraint firstItem="N3N-sL-2It" firstAttribute="top" secondItem="zba-YO-O9W" secondAttribute="top" id="I6M-lm-FEp"/>
+                            <constraint firstItem="zba-YO-O9W" firstAttribute="trailing" secondItem="ORa-Q2-Tiz" secondAttribute="trailing" id="Jo0-Yv-OdV"/>
+                            <constraint firstItem="N3N-sL-2It" firstAttribute="leading" secondItem="zba-YO-O9W" secondAttribute="leading" id="KsM-IG-fNd"/>
+                            <constraint firstItem="ORa-Q2-Tiz" firstAttribute="top" secondItem="zba-YO-O9W" secondAttribute="top" id="MRv-WE-qIL"/>
+                            <constraint firstItem="zba-YO-O9W" firstAttribute="trailing" secondItem="mev-iN-iM8" secondAttribute="trailing" constant="8" id="ReI-ab-tvk"/>
+                            <constraint firstItem="zba-YO-O9W" firstAttribute="bottom" secondItem="N3N-sL-2It" secondAttribute="bottom" id="dB6-cu-hXp"/>
+                            <constraint firstItem="zba-YO-O9W" firstAttribute="trailing" secondItem="N3N-sL-2It" secondAttribute="trailing" id="r1E-sh-4dh"/>
+                            <constraint firstItem="D6K-LM-8ov" firstAttribute="leading" secondItem="zba-YO-O9W" secondAttribute="leading" constant="8" id="suE-VB-ggB"/>
+                            <constraint firstItem="mev-iN-iM8" firstAttribute="leading" secondItem="zba-YO-O9W" secondAttribute="leading" constant="8" id="vLe-ic-Vxt"/>
+                            <constraint firstItem="zba-YO-O9W" firstAttribute="trailing" secondItem="D6K-LM-8ov" secondAttribute="trailing" constant="8" id="vuW-E8-4Yl"/>
+                            <constraint firstItem="D6K-LM-8ov" firstAttribute="top" secondItem="zba-YO-O9W" secondAttribute="top" constant="8" id="wVD-aH-U73"/>
+                            <constraint firstItem="ORa-Q2-Tiz" firstAttribute="leading" secondItem="zba-YO-O9W" secondAttribute="leading" id="xsW-4q-aYC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zba-YO-O9W"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7wl-OH-7gL"/>
+                    <connections>
+                        <outlet property="acceptIngredient" destination="SJg-rJ-Owo" id="0ny-Ih-o6y"/>
+                        <outlet property="acceptRecipe" destination="KVr-xR-iXd" id="70t-4X-bpY"/>
+                        <outlet property="addIngredient" destination="tjZ-5N-aT2" id="9Fq-SP-upA"/>
+                        <outlet property="backgroundBottom" destination="dB6-cu-hXp" id="fYI-yu-k6Z"/>
+                        <outlet property="cancelIngredient" destination="kNp-fC-TqN" id="naW-ur-D9g"/>
+                        <outlet property="cancelRecipe" destination="a3o-ew-3Z5" id="0b7-A4-crs"/>
+                        <outlet property="ingredientCalories" destination="ZFi-YL-VlC" id="M9z-PY-Byq"/>
+                        <outlet property="ingredientName" destination="3Mf-ek-Gha" id="hkO-3m-2cb"/>
+                        <outlet property="ingredientType" destination="pkj-4Y-sJL" id="LOd-GX-J9o"/>
+                        <outlet property="newIngredientView" destination="D6K-LM-8ov" id="ZRQ-Oi-Mps"/>
+                        <outlet property="newRecipeView" destination="mev-iN-iM8" id="3IE-TY-jz0"/>
+                        <outlet property="recipeCategory" destination="ugB-hA-EEU" id="TqJ-HU-8h7"/>
+                        <outlet property="recipeDescription" destination="7ox-yQ-aiw" id="DkS-72-UYl"/>
+                        <outlet property="recipeDifficult" destination="XYk-YP-MZJ" id="Rav-tZ-ZVB"/>
+                        <outlet property="recipeDuration" destination="Yg6-qk-4T3" id="JyO-3O-VDe"/>
+                        <outlet property="recipeIngredients" destination="Pjz-4g-usU" id="Wsd-zU-U5r"/>
+                        <outlet property="recipeSubcategory" destination="WdC-D2-ubS" id="8Gy-hX-ObD"/>
+                        <outlet property="recipeTitle" destination="Z0S-7b-NSl" id="raf-HT-5yp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R7L-PS-bY7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1179.7101449275362" y="34.821428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chef_icon" width="467" height="534"/>
+        <image name="newRecipe" width="32" height="32"/>
+        <image name="newRecipe_selected" width="32" height="32"/>
+    </resources>
+</document>

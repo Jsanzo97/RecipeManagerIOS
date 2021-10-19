@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Thanks for use the application!"; ObjectID = "KWj-eV-fIt"; */
+"KWj-eV-fIt.text" = "Thanks for use the application!";
+
+/* Class = "UITabBarItem"; title = "Close session"; ObjectID = "RqP-Q4-Xsw"; */
+"RqP-Q4-Xsw.title" = "Close session";
+
+/* Class = "UIButton"; normalTitle = "Close session"; ObjectID = "sYr-Vf-q6i"; */
+"sYr-Vf-q6i.normalTitle" = "Close session";
+
+/* Class = "UILabel"; text = "Developed by Jorge Sanzo Hernando"; ObjectID = "vAY-Qy-dwO"; */
+"vAY-Qy-dwO.text" = "Developed by Jorge Sanzo Hernando";

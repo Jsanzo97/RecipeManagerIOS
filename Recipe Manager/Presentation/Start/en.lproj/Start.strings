@@ -1,0 +1,18 @@
+
+/* Class = "UITextField"; accessibilityLabel = "Login - Username"; ObjectID = "MhE-WE-X7x"; */
+"MhE-WE-X7x.accessibilityLabel" = "Login - Username";
+
+/* Class = "UIButton"; accessibilityLabel = "Login"; ObjectID = "USR-0M-vaz"; */
+"USR-0M-vaz.accessibilityLabel" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Log In"; ObjectID = "USR-0M-vaz"; */
+"USR-0M-vaz.normalTitle" = "Log In";
+
+/* Class = "UITextField"; accessibilityLabel = "Login - Password"; ObjectID = "hG8-Ww-LB1"; */
+"hG8-Ww-LB1.accessibilityLabel" = "Login - Password";
+
+/* Class = "UIButton"; accessibilityLabel = "Sign up"; ObjectID = "y3E-PR-IFg"; */
+"y3E-PR-IFg.accessibilityLabel" = "Sign up";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "y3E-PR-IFg"; */
+"y3E-PR-IFg.normalTitle" = "Sign Up";

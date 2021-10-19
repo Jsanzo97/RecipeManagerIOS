@@ -1,0 +1,68 @@
+/* 
+  LocalizableStrings.strings
+  Recipe Manager
+
+  Created by Jorge Sanzo Hernando on 06/10/2021.
+  Copyright © 2021 Jorge Sanzo Hernando. All rights reserved.
+*/
+
+// MARK: - General
+"Something went wrong" = "Algo salió mal";
+
+"Seems like server is not working properly. Please, try it again" = "Parece que el servidor no está funcionando correctamente. Por favor, inténtelo de nuevo";
+
+"Connection timeout" = "Tiempo agotado";
+
+"Please, try it again later" = "Por favor, inténtelo de nuevo más tarde";
+
+"Network not available" = "La red no esta disponible";
+
+"There is no internet connection. Please, check your network/mobile data connection and try again" = "No hay conexión a internet. Por favor, compruebe la conexión del wifi/datos e inténtelo de nuevo";
+
+"Error" = "Error";
+
+"It has not been possible to process your request. Please, try it again" = "No ha sido posible procesar la petición. Por favor, inténtelo de nuevo";
+
+"Please, check that you have filled the required fields appropriately and try again" = "Por favor comprueba que has llenado todos los campos requeridos de forma apropiada e inténtalo de nuevo";
+
+// MARK: - Login
+"Username" = "Usuario";
+
+"Empty username/password" = "Usuario/contraseña vacíos";
+
+"It is not possible to log in the system without entering both the username and the password. Please, check both fields and try again" = "No es posible iniciar sesión en el sistema sin introducir el nombre de usuario y la contraseña, por favor comprueba ambos campos e inténtalo de nuevo";
+
+"Wrong credentials" = "Credenciales erróneas";
+
+"Please, enter the correct username and password and try again" = "Por favor introduce un nombre de usuario y contraseñas correctos e inténtalo de nuevo";
+
+"User already exists" = "Este usuario ya existe";
+
+"User with this username already exists in the system" = "Ya existe un usuario con ese nombre en el sistema";
+
+"Username not found" = "No se encontró ningún usuario con ese nombre";
+
+"Please, ensure that you are typing it correctly and try again." = "Por favor asegurate de que estas escribiendolo correctamente e inténtalo de nuevo";
+
+
+// MARK: - Home
+"Recipes book error" = "Error del libro de recetas";
+
+"It has not been possible to get the recipes book data. Please, try it again" = "No ha sido posible obtener los datos del libro de recetas. Por favor, inténtalo de nuevo";
+
+"It has not been possible to remove the recipe. Please, try it again" = "No ha sido posible borrar la receta. Por favor, inténtalo de nuevo";
+
+// MARK: - NewRecipe
+"Done!" = "Hecho!";
+
+"New recipe has been created" = "La nueva receta ha sido creada";
+
+"Cannot be empty fields, please check it" = "No puede haber campos vacíos, por favor compruébalo";
+
+"It has not been possible to retrieve the difficult types from the server" = "No ha sido posible obtener los tipos de dificultad del servidor";
+
+"It has not been possible to retrieve the ingredient types from the server" = "No ha sido posible obtener los tipos de ingredientes del servidor";
+
+"It has not been possible to retrieve the category types from the server" = "No ha sido posible obtener los tipos de categorías del servidor";
+
+"It has not been possible to retrieve the subcategory types from the server" = "No ha sido posible obtener los tipos de subcategorías del servidor";
