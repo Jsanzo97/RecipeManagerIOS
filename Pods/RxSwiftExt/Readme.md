@@ -1,39 +1,38 @@
-[![CircleCI](https://img.shields.io/circleci/project/github/RxSwiftCommunity/RxSwiftExt/master.svg)](https://circleci.com/gh/RxSwiftCommunity/RxSwiftExt/tree/master)
+[![CircleCI](https://img.shields.io/circleci/project/github/RxSwiftCommunity/RxSwiftExt/main.svg)](https://circleci.com/gh/RxSwiftCommunity/RxSwiftExt/tree/main)
 ![pod](https://img.shields.io/cocoapods/v/RxSwiftExt.svg)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 RxSwiftExt
 ===========
 
-If you're using [RxSwift](https://github.com/ReactiveX/RxSwift), you may have encountered situations where the built-in operators do not bring the exact functionality you want. The RxSwift core is being intentionally kept as compact as possible to avoid bloat. This repository's purpose is to provide additional convenience operators.
+If you're using [RxSwift](https://github.com/ReactiveX/RxSwift), you may have encountered situations where the built-in operators do not bring the exact functionality you want. The RxSwift core is being intentionally kept as compact as possible to avoid bloat. This repository's purpose is to provide additional convenience operators and Reactive Extensions.
 
 Installation
 ===========
 
-This branch of RxSwiftExt targets Swift 4.x and RxSwift 4.0.0 or later.
+This branch of RxSwiftExt targets Swift 5.x and RxSwift 5.0.0 or later.
 
-* If you're looking for the Swift 3 version of RxSwiftExt, please use version `2.5.1` of the framework.
-* If your project is running on Swift 2.x, please use version `1.2` of the framework.
-
+* If you're looking for the Swift 4 version of RxSwiftExt, please use version `3.4.0` of the framework.
 
 #### CocoaPods
 
+Add to your `Podfile`:
+
+```ruby
+pod 'RxSwiftExt', '~> 5'
+```
+
+This will install both the `RxSwift` and `RxCocoa` extensions.
+If you're interested in only installing the `RxSwift` extensions, without the `RxCocoa` extensions, simply use:
+
+```ruby
+pod 'RxSwiftExt/Core'
+```
+
 Using Swift 4:
 
-```
-pod "RxSwiftExt"
-```
-
-Using Swift 3:
-
-```
-pod "RxSwiftExt", '2.5.1'
-```
-
-If you use Swift 2.x:
-
-```
-pod "RxSwiftExt", '1.2'
+```ruby
+pod 'RxSwiftExt', '~> 3'
 ```
 
 #### Carthage
@@ -44,11 +43,14 @@ Add this to your `Cartfile`
 github "RxSwiftCommunity/RxSwiftExt"
 ```
 
-
 Operators
 ===========
 
-RxSwiftExt is all about adding operators to [RxSwift](https://github.com/ReactiveX/RxSwift)! Currently available operators:
+RxSwiftExt is all about adding operators and Reactive Extensions to [RxSwift](https://github.com/ReactiveX/RxSwift)!
+
+## Operators
+
+These operators are much like the RxSwift & RxCocoa core operators, but provide additional useful abilities to your Rx arsenal.
 
 * [unwrap](#unwrap)
 * [ignore](#ignore)
@@ -59,7 +61,8 @@ RxSwiftExt is all about adding operators to [RxSwift](https://github.com/Reactiv
 * [not](#not)
 * [and](#and)
 * [Observable.cascade](#cascade)
-* [pairwise, nwise](#pairwise-nwise)
+* [pairwise](#pairwise)
+* [nwise](#nwise)
 * [retry](#retry)
 * [repeatWithBehavior](#repeatwithbehavior)
 * [catchErrorJustComplete](#catcherrorjustcomplete)
@@ -69,13 +72,26 @@ RxSwiftExt is all about adding operators to [RxSwift](https://github.com/Reactiv
 * [filterMap](#filtermap)
 * [Observable.fromAsync](#fromasync)
 * [Observable.zip(with:)](#zipwith)
+* [Observable.merge(with:)](#mergewith)
+* [count](#count)
+* [partition](#partition)
+* [bufferWithTrigger](#bufferWithTrigger)
 
-Two additional operators are available for `materialize()`'d sequences:
+There are two more available operators for `materialize()`'d sequences:
 
 * [errors](#errors-elements)
 * [elements](#errors-elements)
 
 Read below for details about each operator.
+
+## Reactive Extensions
+
+RxSwift/RxCocoa Reactive Extensions are provided to enhance existing objects and classes from the Apple-ecosystem with Reactive abilities.
+
+* [UIViewPropertyAnimator.animate](#uiviewpropertyanimatoranimate)
+* [UIScrollView.reachedBottom](#uiscrollviewreachedbottom)
+
+--------
 
 Operator details
 ===========
@@ -109,7 +125,7 @@ Ignore specific elements.
 ```
 next(One)
 next(Three)
-completed  
+completed
 ```
 
 #### ignoreWhen
@@ -153,7 +169,7 @@ completed
 Pass elements through only if they were never seen before in the sequence.
 
 ```swift
-    Observable.of("a","b","a","c","b","a","d")
+Observable.of("a","b","a","c","b","a","d")
     .distinct()
     .subscribe { print($0) }
 ```
@@ -165,13 +181,13 @@ next(d)
 completed
 ```
 
-#### map
+#### mapTo
 
 Replace every element with the provided value.
 
 ```swift
 Observable.of(1,2,3)
-    .map(to: "Nope.")
+    .mapTo("Nope.")
     .subscribe { print($0) }
 ```
 ```
@@ -228,11 +244,11 @@ Verifies that every value emitted is `true`
 Observable.of(true, true)
 	.and()
 	.subscribe { print($0) }
-	
+
 Observable.of(true, false)
 	.and()
 	.subscribe { print($0) }
-	
+
 Observable<Bool>.empty()
 	.and()
 	.subscribe { print($0) }
@@ -274,9 +290,9 @@ next(c:1)
 next(c:2)
 ```
 
-#### pairwise, nwise
+#### pairwise
 
-Groups elements emitted by an Observable into arrays, where each array consists of the last N consecutive items; similar to a sliding window.
+Groups elements emitted by an Observable into arrays, where each array consists of the last 2 consecutive items; similar to a sliding window.
 
 ```swift
 Observable.from([1, 2, 3, 4, 5, 6])
@@ -293,10 +309,28 @@ next((5, 6))
 completed
 ```
 
+#### nwise
+
+Groups elements emitted by an Observable into arrays, where each array consists of the last N consecutive items; similar to a sliding window.
+
+```swift
+Observable.from([1, 2, 3, 4, 5, 6])
+    .nwise(3)
+    .subscribe { print($0) }
+```
+
+```
+next([1, 2, 3])
+next([2, 3, 4])
+next([3, 4, 5])
+next([4, 5, 6])
+completed
+```
+
 #### retry
 
-Repeats the source observable sequence using given behavior in case of an error or until it successfully terminated. 
-There are four behaviors with various predicate and delay options: `immediate`, `delayed`, `exponentialDelayed` and 
+Repeats the source observable sequence using given behavior in case of an error or until it successfully terminated.
+There are four behaviors with various predicate and delay options: `immediate`, `delayed`, `exponentialDelayed` and
 `customTimerDelayed`.
 
 ```swift
@@ -419,7 +453,7 @@ let resilientRequest = request.apply(requestPolicy)
 A common pattern in Rx is to filter out some values, then map the remaining ones to something else. `filterMap` allows you to do this in one step:
 
 ```swift
-// keep only odd numbers and double them
+// keep only even numbers and double them
 Observable.of(1,2,3,4,5,6)
 	.filterMap { number in
 		(number % 2 == 0) ? .ignore : .map(number * 2)
@@ -430,7 +464,7 @@ The sequence above keeps even numbers 2, 4, 6 and produces the sequence 4, 8, 12
 
 #### errors, elements
 
-These operators only apply to observable serquences that have been materialized with the `materialize()` operator (from RxSwift core). `errors` returns a sequence of filtered error events, ommitting elements. `elements` returns a sequence of filtered element events, ommitting errors.
+These operators only apply to observable sequences that have been materialized with the `materialize()` operator (from RxSwift core). `errors` returns a sequence of filtered error events, ommitting elements. `elements` returns a sequence of filtered element events, ommitting errors.
 
 ```swift
 let imageResult = _chooseImageButtonPressed.asObservable()
@@ -468,12 +502,12 @@ observableService("Foo", 0)
     .disposed(by: disposeBag)
 ```
 
-#### zipWith
+#### zip(with:)
 
 Convenience version of `Observable.zip(_:)`. Merges the specified observable sequences into one observable sequence by using the selector function whenever all
  of the observable sequences have produced an element at a corresponding index.
 
-```
+```swift
 let first = Observable.from(numbers)
 let second = Observable.from(strings)
 
@@ -488,6 +522,25 @@ first.zip(with: second) { i, s in
 next("a1")
 next("b2")
 next("c3")
+```
+
+#### merge(with:)
+
+Convenience version of `Observable.merge(_:)`. Merges elements from the observable sequence with those of a different observable sequences into a single observable sequence.
+
+```swift
+let oddStream = Observable.of(1, 3, 5)
+let evenStream = Observable.of(2, 4, 6)
+let otherStream = Observable.of(1, 5, 6)
+
+oddStream.merge(with: evenStream, otherStream)
+    .subscribe(onNext: { result in
+        print(result)
+    })
+```
+
+```
+1 2 1 3 4 5 5 6 6
 ```
 
 #### ofType
@@ -511,8 +564,86 @@ completed
 ```
 This example emits 2, 5 (`NSDecimalNumber` Type).
 
+#### [count](http://reactivex.io/documentation/operators/count.html)
+
+Emits the number of items emitted by an Observable once it terminates with no errors. If a predicate is given, only elements matching the predicate will be counted.
+
+```swift
+Observable.from([1, 2, 3, 4, 5, 6])
+    .count { $0 % 2 == 0 }
+    .subscribe()
+```
+
+```
+next(3)
+completed
+```
+
+#### partition
+
+Partition a stream into two separate streams of elements that match, and don't match, the provided predicate.
+
+```swift
+let numbers = Observable
+        .of(1, 2, 3, 4, 5, 6)
+
+    let (evens, odds) = numbers.partition { $0 % 2 == 0 }
+
+    _ = evens.debug("even").subscribe() // emits 2, 4, 6
+    _ = odds.debug("odds").subscribe() // emits 1, 3, 5
+```
+
+#### bufferWithTrigger
+Collects the elements of the source observable, and emits them as an array when the trigger emits.
+
+```swift
+let observable = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
+let signalAtThreeSeconds = Observable<Int>.timer(3, scheduler: MainScheduler.instance).map { _ in () }
+let signalAtFiveSeconds = Observable<Int>.timer(5, scheduler: MainScheduler.instance).map { _ in () }
+let trigger = Observable.of(signalAtThreeSeconds, signalAtFiveSeconds).merge()
+let buffered = observable.bufferWithTrigger(trigger)
+buffered.subscribe { print($0) }
+// prints next([0, 1, 2]) @ 3, next([3, 4]) @ 5
+```
+
+A live demonstration is available in the Playground.
+
+Reactive Extensions details
+===========
+
+#### UIViewPropertyAnimator.animate
+
+The `animate(afterDelay:)` operator provides a Completable that triggers the animation upon subscription and completes when the animation ends.
+
+```swift
+button.rx.tap
+    .flatMap {
+        animator1.rx.animate()
+            .andThen(animator2.rx.animate(afterDelay: 0.15))
+            .andThen(animator3.rx.animate(afterDelay: 0.1))
+    }
+```
+
+#### UIViewPropertyAnimator.fractionComplete
+
+The `fractionComplete` binder provides a reactive way to bind to `UIViewPropertyAnimator.fractionComplete`.
+
+```swift
+slider.rx.value.map(CGFloat.init)
+    .bind(to: animator.rx.fractionComplete)
+```
+
+#### UIScrollView.reachedBottom
+
+`reachedBottom` provides a sequence that emits every time the `UIScrollView` is scrolled to the bottom, with an optional offset.
+
+```swift
+tableView.rx.reachedBottom(offset: 40)
+            .subscribe { print("Reached bottom") }
+```
+
 ## License
 
-This library belongs to _RxSwiftCommunity_.
+This library belongs to _RxSwift Community_.
 
 RxSwiftExt is available under the MIT license. See the LICENSE file for more info.
